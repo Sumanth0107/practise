@@ -11,14 +11,12 @@ public class ReadJson {
 		// TODO Auto-generated method stub
         try {
         	ObjectMapper objectMapper=new ObjectMapper();
-        	File jsonFile=new File("student.json/student.json");
+        	File jsonFile=new File(".\\JSON\\Student.json");
         	JsonNode studentData=objectMapper.readTree(jsonFile);
         	System.out.println("Student Details:");
         	System.out.println("-------");
-        	System.out.println("Name : "+studentData.get("name").asText());
-        	System.out.println("Age : "+ studentData.get("age").asInt());
-        	System.out.println("Department : "+ studentData.get("department").asText());
-        	System.out.println("college :"+ studentData.get("college").asText());
+        	System.out.println("firstName : "+studentData.get("firstname").asText());
+        	System.out.println("lastName : "+ studentData.get("lastname").asInt());
         }
         catch(Exception e) {
         	e.printStackTrace();
